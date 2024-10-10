@@ -1,0 +1,20 @@
+{
+  "name": "laborconnect",
+  "version": "1.0.0",
+  "description": "This is a backend for our project laborconnect",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "labor",
+    "job",
+    "connect",
+    "work"
+  ],
+  "author": "satyam and skand",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.21.1"
+  }
+}
