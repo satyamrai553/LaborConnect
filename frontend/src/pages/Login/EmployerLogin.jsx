@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
 
-function Login() {
+function EmployerLogin() {
   return (
     <div className='overflow-hidden bg-[#F3F4F6] h-screen flex items-center justify-center px-6 py-12'>
         <div>
@@ -9,9 +9,10 @@ function Login() {
             <h1 className='font-black text-4xl text-center text-[#1F2937]'>
               LaborConnect
             </h1>
-            <h2 className='text-[#1F2937] font-sans font-bold text-2xl text-center mt-10'>
+            <h2 className='text-[#1F2937] font-sans font-bold text-2xl text-center mt-10'>Employer Login</h2>
+            <h3 className='text-[#1F2937] font-sans font-bold text-2xl text-center mt-10'>
               Sign in to your account
-            </h2>
+            </h3>
           </div>
           <div className='mt-10'>
             <form action="">
@@ -64,4 +65,4 @@ function Login() {
   )
 }
 
-export default Login
+export default EmployerLogin

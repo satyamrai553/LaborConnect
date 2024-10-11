@@ -1,9 +1,31 @@
 import React from 'react'
-import HeroSection from '../../components/Home/HeroSection'
+import {
+  AboutUs,
+  Services,
+  FeaturedJobs,
+  Testimonials,
+  HowItWorks,
+  Statistics,
+  CTA,
+  FAQ,
+  ContactInfo,
+  HeroSection
+} from '../../components/Home'
 
 function Home() {
   return (
-    <HeroSection/>
+    <div>
+    <HeroSection />
+    <AboutUs />
+    <Services />
+    <FeaturedJobs />
+    <Testimonials />
+    <HowItWorks />
+    <Statistics />
+    <CTA />
+    <FAQ />
+    <ContactInfo />
+  </div>
   )
 }
 

@@ -1,9 +1,17 @@
 import React from 'react'
-
-function Job() {
-  return (
-    <div>Job</div>
-  )
-}
-
-export default Job
+import {
+  JobNavigation,
+  JobListing,} from '../../components/Jobs/index.js'
+ 
+  
+  function JobPage() {
+    return (
+      <div className="flex">
+        <JobNavigation />
+        <JobListing />
+      </div>
+    );
+  }
+  
+  export default JobPage;
+  
