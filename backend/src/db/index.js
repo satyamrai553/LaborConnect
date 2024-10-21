@@ -1,6 +1,16 @@
 import mongoose from 'mongoose';
+import {DB_NAME} from '../../constants.js'
 
-async function dbConnect(){
-    // Connect to your MongoDB database
-   const response = mongoose.connect(``)
+const dbConnect = async ()=>{
+    try {
+        const connectionInstance = await mongoose.connect(`${process.env.MONGODB_URI}/${DB_NAME}`)
+        console.log(`Connecting to Mongo: ${connectionInstance.connection.host}`);
+    } catch (error) {
+        console.error(`Error connecting to Mongo ${error}`);
+        process.exit(1)
+    }
+
 }
+
+
+export default dbConnect;
