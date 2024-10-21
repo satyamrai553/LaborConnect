@@ -1,17 +1,29 @@
-import express from 'express';
+import dotenv from 'dotenv';
+import dbConnect from './src/db/index.js';
+import app from './app.js'
+import cors from "cors"
 
 
-const app = express();
+app.use(cors({
+    origin: process.env.CORS_ORIGIN,
+    credentials: true
+}))
 
 
-app.get('/', (req,res)=>{
-    res.send("Backend is running")
-    console.log("welcome to backend of laboutConnect");
-    
+dotenv.config({
+    path: './.env'
 })
 
 
-app.listen(4000, ()=>{
-    console.log("server is listening on port 4000");
-    
+dbConnect().then(()=>{
+    app.get('/', (req, res)=>{
+        res.send("Welcome to labourConnect backend!");
+    })
+
+    app.listen(`${process.env.PORT}`, ()=>{
+        console.log(`Server is running on port ${process.env.PORT}`);
+    })
 })
+.catch((err)=>{
+        console.log("DB connection error: ",err)
+    })
